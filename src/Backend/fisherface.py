@@ -55,7 +55,7 @@ names = {
 }
 
 
-class help_functions:
+class fisherFaces:
     def __init__(self):
         with h5py.File("model.h5", "r") as file:
             self.D = file["D"][:]
@@ -74,7 +74,7 @@ class help_functions:
         q = np.asarray(q).flatten()
         return np.sqrt(np.sum(np.power((p - q), 2)))
 
-    def predict_fun(self, test_data):
+    def predict(self, test_data):
         minDist = np.finfo("float").max
         minClass = -1
 
